@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application | SmartTech Solutions</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>SmartTech Solutions</h1>
+        <p>Your future in technology starts here</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="apply.html" class="active">Apply</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="mailto:info@smarttech.com.au">Email Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="form-section">
+            <h2>Job Application Form</h2>
+            <p>Please fill out the form below to apply for a position with us.</p>
+
+            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+                <!-- Job Details -->
+                <fieldset>
+                    <legend>Job Details</legend>
+                    <label for="jobref">Job Reference Number:</label>
+                    <select id="jobref" name="jobref" required>
+                        <option value="">-- Select Job --</option>
+                        <option value="DEV01">DEV01 - Frontend Developer</option>
+                        <option value="UX02">UX02 - UI/UX Designer</option>
+                    </select>
+                </fieldset>
+
+                <!-- Personal Info -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <div class="form-group">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" maxlength="20" pattern="[A-Za-z]{1,20}" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" maxlength="20" pattern="[A-Za-z]{1,20}" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required />
+                    </div>
+
+                    <fieldset class="gender-group">
+                        <legend>Gender</legend>
+                        <label><input type="radio" name="gender" value="Male" required /> Male</label>
+                        <label><input type="radio" name="gender" value="Female" /> Female</label>
+                        <label><input type="radio" name="gender" value="Other" /> Other</label>
+                    </fieldset>
+                </fieldset>
+
+                <!-- Contact Info -->
+                <fieldset>
+                    <legend>Contact Information</legend>
+
+                    <div class="form-group">
+                        <label for="street">Street Address:</label>
+                        <input type="text" id="street" name="street" maxlength="40" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="suburb">Suburb/Town:</label>
+                        <input type="text" id="suburb" name="suburb" maxlength="40" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State:</label>
+                        <select id="state" name="state" required>
+                            <option value="">-- Select State --</option>
+                            <option>VIC</option>
+                            <option>NSW</option>
+                            <option>QLD</option>
+                            <option>NT</option>
+                            <option>WA</option>
+                            <option>SA</option>
+                            <option>TAS</option>
+                            <option>ACT</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode">Postcode:</label>
+                        <input type="text" id="postcode" name="postcode" pattern="\d{4}" maxlength="4" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[\d\s]{8,12}" required />
+                    </div>
+                </fieldset>
+
+                <!-- Skills -->
+                <fieldset>
+                    <legend>Technical Skills</legend>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="skills" value="HTML" checked /> HTML</label>
+                        <label><input type="checkbox" name="skills" value="CSS" /> CSS</label>
+                        <label><input type="checkbox" name="skills" value="JavaScript" /> JavaScript</label>
+                        <label><input type="checkbox" name="skills" value="Python" /> Python</label>
+                    </div>
+
+                    <label for="others">Other Skills:</label>
+                    <textarea id="others" name="others" rows="4"
+                        placeholder="Write about your other skills..."></textarea>
+                </fieldset>
+
+                <!-- Submit -->
+                <div class="form-submit">
+                    <input type="submit" value="Apply" />
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 SmartTech Solutions | <a href="linkjira">Jira Project</a></p>
+    </footer>
+</body>
+
+</html>
