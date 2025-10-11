@@ -4,13 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Job openings and career opportunities at our IT company">
+        <link rel="stylesheet" href="styles/styles.css">
         <title>Job Openings</title>
     </head>
-    <body>
+    <body class="jobs">
         <!-- HEADER SECTION
           - Contains site title and primary navigation menu.
           - Meets project requirement: must include links to Home, Jobs, Apply, About, and Contact (mailto). -->
         <header>
+        <img src="images/Logo.png" alt="SmartTech Solutions logo" class="site-logo">
         <h1>Join Our Team</h1>
         <nav>
             <ul>
@@ -27,7 +29,7 @@
                     <a href="about.html">About us</a>
                 </li>
                 <li>
-                    <a href="mailto:info@companyname.com.au">Contact</a>
+                    <a href="mailto:info@smarttech.com.au">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -41,6 +43,29 @@
             Welcome to our Careers page. Here you will find current job openings available at our IT company. Each position description below outlines the key responsibilities, required qualifications, and desirable attributes for the role. Read carefully before submitting your application through the Apply page.
          </p>
         </article>
+
+        <aside id="jobs-aside" aria-labelledby="aside-title">
+            <h2 id="aside-title">Why Work With Us?</h2>
+            <p>
+                We value creativity, collaboration, and continuous learning. Our employees are empowered to explore new technologies, share ideas, and grow their professional careers in an innovative environment.
+            </p>
+            <h3>Tips for Applicants</h3>
+            <ul>
+                <li>
+                    Read the job descriptions carefully before applying.
+                </li>
+                <li>
+                    Attach an updated CV and include relevant project links or portfolios.
+                </li>
+                <li>
+                    Use the Apply page to submit your application.
+                </li>
+                <li>
+                    Include the correct reference number for the position you are applying for.
+                </li>
+            </ul>
+        </aside>
+
         <section id="network-admin" aria-labelledby="na-title"> <!-- aria-labelledby links the section to its heading for better accessibility -->
             <h2 id="na-title">Network Administrator (Ref: NA101)</h2>
             <p><strong>Reports to:</strong> IT Infrastructure Manager</p>
@@ -288,35 +313,11 @@
                 </li>                
             </ul>
         </section>
-        <aside id="jobs-aside" aria-labelledby="aside-title">
-            <h2 id="aside-title">Why Work With Us?</h2>
-            <p>
-                We value creativity, collaboration, and continuous learning. Our employees are empowered to explore new technologies, share ideas, and grow their professional careers in an innovative environment.
-            </p>
-            <h3>Tips for Applicants</h3>
-            <ul>
-                <li>
-                    Read the job descriptions carefully before applying.
-                </li>
-                <li>
-                    Attach an updated CV and include relevant project links or portfolios.
-                </li>
-                <li>
-                    Use the Apply page to submit your application.
-                </li>
-                <li>
-                    Include the correct reference number for the position you are applying for.
-                </li>
-            </ul>
-        </aside>
     </main>
     <footer>
         <p>
-            <small>&copy; 2025 </small>
-        </p>
-        <p>
-            <small>
-                Contact <a href="mailto:info@company.com.au">Companyname</a> 
+            <small>&copy; 2025 
+                <a href="mailto:info@smarttech.com.au">SmartTech Solutions</a>
             </small>
         </p>
     </footer>

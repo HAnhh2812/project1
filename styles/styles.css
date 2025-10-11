@@ -14,53 +14,6 @@ body {
     color: #222;
 }
 
-/* Header section */
-header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #003366;
-    color: #fff;
-}
-
-/* Navigation bar */
-nav ul {
-    display: flex;
-    /* Use Flexbox to align menu items horizontally */
-    justify-content: center;
-    /* Center the menu items */
-    background-color: #00509e;
-    margin: 0;
-    padding: 0.5rem 0;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-}
-
-/* Highlight active or hovered menu item */
-nav ul li a:hover,
-nav ul li a.active {
-    background-color: #0074d9;
-    border-radius: 5px;
-}
-
-/* Main content container */
-main {
-    max-width: 900px;
-    margin: 2rem auto;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
 /* ===== Form Section ===== */
 .form-section h2 {
     color: #003366;
@@ -208,4 +161,183 @@ footer a:hover {
     textarea {
         width: 100%;
     }
+}
+
+/* =======================================================
+   GLOBAL HEADER STYLES
+   Author: Hai Anh
+   Purpose:
+   Provide a consistent, accessible, and responsive header layout across all pages. The design integrates the company logo, title, and primary navigation links with high contrast and flexible scaling.
+   ======================================================= */
+
+/* Header container: flexbox layout for horizontal alignment.
+   Components: Logo (left), Title (center-left), Navigation (right). */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    background-color: #06062d; /* Deep navy background for contrast */
+    color: #ffffff;
+    padding: 1rem 2rem;
+}
+
+/* Company logo styling — positioned on the left with proportional scaling. */
+header img.site-logo {
+    width: 250px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Page title positioned near the logo with metallic gradient text.
+   This conveys a professional, high-tech brand identity. */
+header h1 {
+    margin: 0 1rem;
+    font: bold 2rem "Arial", sans-serif; 
+    background: linear-gradient(to right, #b0b5bb, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+/* Navigation bar aligned to the right using flexbox. */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem; /* Spacing between nav items */
+}
+
+nav ul li a {
+    color: #e0e0ff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+/* Hover and active link state: brighter blue color for contrast.
+   The color is chosen to match the company logo. */
+nav ul li a:hover,
+nav ul li a[aria-current="page"] {
+    background-color: #2d3482;
+    color: #ffffff;
+}
+
+/* Responsive header adjustments for tablets and smaller screens. */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    header h1 {
+        margin: 0.5rem 0;
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* =======================================================
+   Main Content Container (Responsive)
+   Author: Hai Anh
+   Purpose: Create a flexible content area that adapts to different screen sizes while maintaining readability.
+   ======================================================= */
+
+main {
+    width: 90%;                  /* occupy 90% of the screen width */
+    max-width: 1200px;           /* prevent it from stretching too wide */
+    margin: 2rem auto;           
+    background: #ffffff;         
+    padding: 2rem;               
+    border-radius: 10px;         
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* =======================================================
+   Jobs Page Layout (Aside Float Right)
+   Author: Hai Anh
+   Purpose:
+   Implements layout where <aside> floats right (25%)
+   and job descriptions occupy remaining 75%.
+   ======================================================= */
+
+.jobs main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  overflow: auto; /* allows main to wrap floated aside */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Introductory article (full width, above columns) */
+.jobs article {
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #b0b5bb;
+  padding-left: 1rem;
+}
+
+/* Float aside to the right (25%) as required by specification */
+.jobs aside {
+  float: right;
+  width: 25%;
+  background-color: #f7f9fc;
+  border: 2px solid #00509e;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-left: 2rem; /* space between aside and job sections */
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+/* Job sections occupy remaining width (≈75%) */
+.jobs section {
+  width: 70%;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+/* Headings within job sections */
+.jobs section h2 {
+  color: #06062d;
+  border-bottom: 2px solid #b0b5bb;
+  padding-bottom: 0.3rem;
+  margin-top: 0;
+}
+
+/* Lists for better readability */
+.jobs section ul,
+.jobs section ol {
+  margin: 0.5rem 0 0.5rem 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive behavior */
+@media (max-width: 900px) {
+  .jobs aside {
+    float: none;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .jobs section {
+    width: 100%;
+  }
 }
