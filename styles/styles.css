@@ -1,10 +1,17 @@
-/* =========================
-   Author: Diep Le
-   File: styles.css
-   Purpose: Main stylesheet for SmartTech Solutions website
-   ========================= */
+/* =======================================================
+   File: Apply.html
+   Author: Thuy Diep
+   Project: SmartTech Solutions Website
+   Purpose: Defines layout, form styling, and responsive design
+            for a clean, user-friendly interface.
+            Job Application page allowing applicants to submit
+            personal details, contact information, and technical
+            skills for positions listed in jobs.html.
+   ======================================================= */
 
-/* General layout */
+/* =======================================================
+   GENERAL LAYOUT & BASE STYLES
+   ======================================================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,7 +21,10 @@ body {
     color: #222;
 }
 
-/* ===== Form Section ===== */
+
+/* =======================================================
+   FORM SECTION STYLING
+   ======================================================= */
 .form-section h2 {
     color: #003366;
     margin-bottom: 0.5rem;
@@ -23,7 +33,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    /* Arrange elements vertically */
+    /* Stack form elements vertically */
     gap: 1.5rem;
     /* Space between form sections */
 }
@@ -39,11 +49,11 @@ legend {
     color: #003366;
 }
 
-/* Group label and input on the same line */
+/* Align labels and inputs neatly on one line */
 .form-group {
     display: flex;
     flex-wrap: wrap;
-    /* Allow wrapping on smaller screens */
+    /* Wrap elements on smaller screens */
     align-items: center;
     /* Vertically align labels and inputs */
     margin-bottom: 0.8rem;
@@ -55,7 +65,7 @@ label {
     font-weight: 600;
 }
 
-/* Input, select, and textarea styles */
+/* Input, select, and textarea base styles */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -69,7 +79,7 @@ textarea {
     font-size: 1rem;
 }
 
-/* Focus state for input fields */
+/* Focus state for better accessibility */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
@@ -81,7 +91,7 @@ textarea:focus {
     box-shadow: 0 0 3px #0074d9;
 }
 
-/* Gender radio buttons */
+/* Gender radio button spacing */
 .gender-group label {
     margin-right: 1rem;
 }
@@ -90,22 +100,25 @@ textarea:focus {
 .checkbox-group label {
     display: inline-block;
     margin-right: 1rem;
+    margin-bottom: 0.3rem;
 }
 
 /* Textarea customization */
 textarea {
     width: 100%;
     resize: vertical;
-    /* Allow vertical resizing only */
+    /* Allow only vertical resizing */
 }
 
-/* ===== Submit Button ===== */
+
+/* =======================================================
+   SUBMIT BUTTON STYLING
+   ======================================================= */
 .form-submit {
     text-align: center;
     margin-top: 1rem;
 }
 
-/* Submit button styling */
 input[type="submit"] {
     background-color: #00509e;
     color: #fff;
@@ -117,12 +130,14 @@ input[type="submit"] {
     transition: background 0.3s ease;
 }
 
-/* Hover effect for submit button */
 input[type="submit"]:hover {
     background-color: #0074d9;
 }
 
-/* ===== Footer Section ===== */
+
+/* =======================================================
+   FOOTER SECTION STYLING
+   ======================================================= */
 footer {
     text-align: center;
     padding: 1rem;
@@ -131,7 +146,6 @@ footer {
     margin-top: 2rem;
 }
 
-/* Footer link styles */
 footer a {
     color: #2d8faa;
     text-decoration: none;
@@ -141,10 +155,11 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* ===== Responsive Design ===== */
-@media (max-width: 700px) {
 
-    /* Stack labels above inputs on small screens */
+/* =======================================================
+   RESPONSIVE DESIGN
+   ======================================================= */
+@media (max-width: 700px) {
     label {
         width: 100%;
         margin-bottom: 0.3rem;
@@ -155,13 +170,86 @@ footer a:hover {
         align-items: flex-start;
     }
 
-    /* Ensure all inputs fit full width */
     input,
     select,
     textarea {
         width: 100%;
     }
 }
+
+
+/* =======================================================
+   APPLY PAGE LAYOUT (FORM + SIDEBAR)
+   ======================================================= */
+.apply-layout {
+    display: grid;
+    grid-template-columns: 2.3fr 0.9fr;
+    /* Sidebar narrower than form */
+    gap: 2rem;
+    padding: 2rem;
+    align-items: start;
+    /* Align both sections from top */
+}
+
+/* Sidebar styling */
+.apply-sidebar {
+    background-color: #f0f4ff;
+    border-left: 4px solid #00509e;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+    max-height: 90%;
+    overflow-y: auto;
+    /* Scroll if content exceeds height */
+}
+
+/* Sidebar headings */
+.apply-sidebar h2,
+.apply-sidebar h3 {
+    color: #003366;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Sidebar lists and text */
+.apply-sidebar ul {
+    padding-left: 1.2rem;
+    line-height: 1.5;
+}
+
+.apply-sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.apply-sidebar p {
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+/* Responsive sidebar layout */
+@media (max-width: 900px) {
+    .apply-layout {
+        grid-template-columns: 1fr;
+        /* Stack layout */
+    }
+
+    .apply-sidebar {
+        margin-top: 2rem;
+        max-height: none;
+    }
+}
+
+
+/* =======================================================
+   CENTERED TEXTAREA ("Other Skills")
+   ======================================================= */
+#others {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+
 
 /* =======================================================
    GLOBAL HEADER STYLES
@@ -176,7 +264,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allows wrapping on small screens */
+    flex-wrap: wrap;
+    /* Allows wrapping on small screens */
     background: linear-gradient(90deg, #06062d 0%, #0a2a5e 70%, #1f4e8c 100%);
     color: #ffffff;
     padding: 1rem 2rem;
@@ -193,7 +282,7 @@ header img.site-logo {
    This conveys a professional, high-tech brand identity. */
 header h1 {
     margin: 0 1rem;
-    font: bold 2rem "Arial", sans-serif; 
+    font: bold 2rem "Arial", sans-serif;
     background: linear-gradient(to right, #b0b5bb, #ffffff);
     background-clip: text;
     color: transparent;
@@ -206,7 +295,8 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 1rem; /* Spacing between nav items */
+    gap: 1rem;
+    /* Spacing between nav items */
 }
 
 nav ul li a {
@@ -258,13 +348,15 @@ nav ul li a[aria-current="page"] {
    ======================================================= */
 
 main {
-    width: 90%;                  /* occupy 90% of the screen width */
-    max-width: 1200px;           /* prevent it from stretching too wide */
-    margin: 2rem auto;           
-    background: #ffffff;         
-    padding: 2rem;               
-    border-radius: 10px;         
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    width: 90%;
+    /* occupy 90% of the screen width */
+    max-width: 1200px;
+    /* prevent it from stretching too wide */
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* =======================================================
@@ -276,91 +368,92 @@ main {
    ======================================================= */
 
 .jobs main {
-  width: 90%;
-  max-width: 1200px;
-  margin: 2rem auto;
-  overflow: auto; /* allows main to wrap floated aside */
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  box-sizing: border-box;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    overflow: auto;
+    /* allows main to wrap floated aside */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 /* Introductory article (full width, above columns) */
 .jobs article {
-  margin-bottom: 1.5rem;
-  border-left: 5px solid #b0b5bb;
-  padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #b0b5bb;
+    padding-left: 1rem;
 }
 
 /* Float aside to the right (25%) as required by specification */
 .jobs aside {
-  float: right;
-  width: 25%;
+    float: right;
+    width: 25%;
 
-  /* Dual-layer gradient: base silver + light highlight for gloss */
-  background:
-    radial-gradient(circle at 10% 5%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 35%),
-    linear-gradient(160deg, #ffffff 0%, #f3f4f6 45%, #dfe3e8 100%);
+    /* Dual-layer gradient: base silver + light highlight for gloss */
+    background:
+        radial-gradient(circle at 10% 5%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 35%),
+        linear-gradient(160deg, #ffffff 0%, #f3f4f6 45%, #dfe3e8 100%);
 
-  border: 2px solid #b0b5bb;
-  border-radius: 10px;
-  padding: 1.2rem;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-  box-sizing: border-box;
+    border: 2px solid #b0b5bb;
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
 
-  /* Elevation and internal reflection */
-  box-shadow:
-    inset 0 2px 6px rgba(255, 255, 255, 0.5),
-    0 4px 14px rgba(0, 0, 0, 0.1);
+    /* Elevation and internal reflection */
+    box-shadow:
+        inset 0 2px 6px rgba(255, 255, 255, 0.5),
+        0 4px 14px rgba(0, 0, 0, 0.1);
 
-  color: #06062d;
-  font-size: 0.95rem;
-  line-height: 1.6;
+    color: #06062d;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Headings inside aside: deep blue for subtle contrast */
 .jobs aside h2,
 .jobs aside h3 {
-  color: #003366;
-  margin-top: 0.5rem;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+    color: #003366;
+    margin-top: 0.5rem;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
 }
 
 
 /* Job sections occupy remaining width (≈75%) */
 .jobs section {
-  width: 70%;
-  margin-bottom: 2rem;
-  box-sizing: border-box;
+    width: 70%;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
 }
 
 /* Headings within job sections */
 .jobs section h2 {
-  color: #06062d;
-  border-bottom: 2px solid #b0b5bb;
-  padding-bottom: 0.3rem;
-  margin-top: 0;
+    color: #06062d;
+    border-bottom: 2px solid #b0b5bb;
+    padding-bottom: 0.3rem;
+    margin-top: 0;
 }
 
 /* Lists for better readability */
 .jobs section ul,
 .jobs section ol {
-  margin: 0.5rem 0 0.5rem 1rem;
-  line-height: 1.6;
+    margin: 0.5rem 0 0.5rem 1rem;
+    line-height: 1.6;
 }
 
 /* Responsive behavior */
 @media (max-width: 900px) {
-  .jobs aside {
-    float: none;
-    width: 100%;
-    margin: 1rem 0;
-  }
+    .jobs aside {
+        float: none;
+        width: 100%;
+        margin: 1rem 0;
+    }
 
-  .jobs section {
-    width: 100%;
-  }
+    .jobs section {
+        width: 100%;
+    }
 }
