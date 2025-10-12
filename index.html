@@ -1,36 +1,169 @@
+<!--  index.html
+  COS10026 Project Part 1 - Group 02
+  Author: Hai Anh
+  Description: Defines the Home page for SmartTech Solutions website. Introduces the company, its services, core values, and career opportunities..-->
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="Thu">
-        <title>Company description</title>
-    </head>
-    <body>
-        <header>
-            <img src="logo.png" alt="Our comapany logo">
-            <h1>Recruiting app developer</h1>
-            <P>We are looking for a coder and an IT expert </P>
-            <h2>About us</h2>
-            <p>With 20 years of developing and experience, and more than 10,000 employees, starting, from a 0,I am so proud of what we achieved. We have been selling millions of products, and consulting excellent-performing companies including Phillips, ASML. Customers keep coming back. In other words, we have created credibility.Despite what we did, we still want to make greater changes by having two more teams, the A team and the B team.</p>
-            <p>Regarding workspace, we spent a lot of time and, after listening to ideas from research, created an evironment that people want to go to. Regarding workspace, we have chefs from America, cooking us the most healthy, nutritious, yet delicious dishes. Besides, we have a gym and a center of sports. It is not to mention that we also have a DJ room where you can get late night snacks, have fun and go crazy. Morerover, we have a bar for romantic dates at night. </p>
-            <img src="bar.jpg" alt="bar">
-            <img src="dj.jpg" alt="dj room">
-            <img src="gym.jpg" alt="gym">
-            <p>Cost for all of this outside must be a lot, and you can get the service here for free with my payment. </p>
-            <p>This is for employees, not only to work hard and effectively, but also to become their most rounded selves with every aspect of life.</p>
-            <p>Another point worth your time is that our staff team has the freedom to be creative in an environment enhancing that, as we always welcome ideas. Anyone having an idea can tell me via email, and I will read it carefully.</p>
-            <nav>
-                <a href="index.html">Home page</a>
-                <a href="jobs.html">Job description</a>
-                <a href="apply.html">Job application</a>
-                <a href="about.html">About us</a>
-            </nav>
-        </header>
-        <footer>
-            <p>Contact us</p>
-            <a href="info@janekeith.com.au">info@janekeith.com.au</a>
-        </footer>
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta
+      name="description"
+      content="SmartTech Solutions - Home page introducing the company, services, and career opportunities."/>
+    <title>SmartTech Solutions | Home</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+
+  <body class="home">
+    <!-- =======================================================
+         HEADER SECTION
+         Author: Hai Anh
+         Purpose:
+         Provides global navigation and branding, including
+         site logo, title, and navigation links.
+         ======================================================= -->
+    <header>
+      <img
+        src="images/Logo.png"
+        alt="SmartTech Solutions logo"
+        class="site-logo"/>
+      <h1>SmartTech Solutions</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="jobs.html">Jobs</a>
+          </li>
+          <li>
+            <a href="apply.html">Apply</a>
+          </li>
+          <li>
+            <a href="about.html">About us</a>
+          </li>
+          <li>
+            <a href="mailto:info@smarttech.com.au">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- =======================================================
+         MAIN CONTENT
+         Purpose:
+         Introduces the company, outlines services and values, and includes call-to-action links to job pages.
+         ======================================================= -->
+    <main>
+      <!-- =======================================================
+           INTRODUCTION SECTION
+           ======================================================= -->
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="intro-text">
+          <h2 id="intro-title">Building the Future of Technology</h2>
+          <p>
+            At SmartTech Solutions, we transform ideas into innovation. Our
+            expert team delivers reliable, cutting-edge solutions that help
+            businesses grow and adapt in the digital era.
+          </p>
+        </div>
+        <img
+          src="images/teamwork.jpg"
+          alt="SmartTech Solutions team collaborating in a modern office"
+        />
+      </section>
+
+      <!-- =======================================================
+           ABOUT SECTION
+           Purpose:
+           Introduces SmartTech Solutions background and mission.
+           ======================================================= -->
+      <section class="about" aria-labelledby="about-title">
+        <h2 id="about-title">Who We Are</h2>
+        <p>
+          SmartTech Solutions is a Melbourne-based IT company specialising in
+          network infrastructure, software development, and user experience
+          design. Founded by a passionate team of engineers, our mission is to
+          make technology accessible, efficient, and sustainable for every
+          organisation.
+        </p>
+      </section>
+
+      <!-- =======================================================
+           SERVICES SECTION
+           Purpose:
+           Highlights core technical areas and expertise.
+           ======================================================= -->
+      <section class="services" aria-labelledby="services-title">
+        <h2 id="services-title">Our Areas of Expertise</h2>
+        <ul>
+          <li>
+            <strong>Network Administration</strong>
+            <p>Secure, high-performance networking solutions.</p>
+          </li>
+          <li>
+            <strong>Software Development</strong>
+            <p>Scalable, reliable applications built for growth.</p>
+          </li>
+          <li>
+            <strong>UI/UX Design</strong>
+            <p>Intuitive and accessible interfaces for users.</p>
+          </li>
+          <li>
+            <strong>Artificial Intelligence</strong>
+            <p>Data-driven systems powering smarter decisions.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- =======================================================
+           VALUES SECTION ("Why Choose Us")
+           Purpose:
+           Presents company principles, culture, and core values.
+           ======================================================= -->
+      <section class="values" aria-labelledby="values-title">
+        <h2 id="values-title">Why Choose Us</h2>
+        <p>
+          At SmartTech Solutions, we believe that innovation thrives where
+          creativity and collaboration meet. Our culture encourages continuous
+          learning, open communication, and personal growth — empowering every
+          member to contribute meaningfully to groundbreaking projects.
+        </p>
+      </section>
+
+      <!-- =======================================================
+           CALL-TO-ACTION SECTION
+           Purpose:
+           Encourages users to view current job openings or apply.
+           ======================================================= -->
+      <section class="cta" aria-labelledby="cta-title">
+        <h2 id="cta-title">Join Our Team</h2>
+        <p>
+          Ready to take the next step in your career? Explore our current
+          openings or submit your application today.
+        </p>
+        <p>
+          <a href="jobs.html" class="btn primary">View Job Openings</a>
+          <a href="apply.html" class="btn secondary" >Apply Now</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- =======================================================
+         FOOTER SECTION
+         Purpose:
+         Displays contact information and project management link.
+         ======================================================= -->
+    <footer>
+      <p>
+        <small>
+          &copy; 2025
+          <a href="mailto:info@smarttech.com.au">SmartTech Solutions</a> |
+          Project Management: Jira Project
+        </small>
+      </p>
+    </footer>
+  </body>
 </html>
+<!-- End of index.html -->
