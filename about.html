@@ -1,80 +1,154 @@
+<!-- about.html
+  COS10026 Project Part 1 - Group 02
+  Author: Le Thi Thuy Diep
+  Description: Contains group information, member contributions, and interests for SmartTech Solutions.
+-->
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="About my group">
-        <meta name="keywords" content="Group, 02, Contribution">
-        <meta name="author" content="Thu">
-    </head>
-    <body>
-        <header>
-            <h1>About our group</h1>    
-        </header>
-        <article>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="About Group 02 - COS10026 Web Technology Project" />
+    <meta name="keywords" content="SmartTech, Group 02, COS10026, Web Project, About Us" />
+    <title>About Us | SmartTech Solutions</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body class="about-page">
+    <!-- HEADER SECTION -->
+    <header>
+        <img src="images/Logo.png" alt="SmartTech Solutions logo" class="site-logo" />
+        <h1>About Our Group</h1>
+        <nav>
             <ul>
-                <li>Group Name: Group 02</li>
-                <li>Class Time and Day: Friday, 2pm-5pm</li>
-                <ol>
-                    <li>Vu Hai Anh: </li>
-                    <li>Vo Quynh Thu:</li>
-                    <li>Le Thi Thuy Diep:</li>
-            
-                </ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html" aria-current="page" class="active">About us</a></li>
+                <li><a href="mailto:info@smarttech.com.au">Contact</a></li>
             </ul>
-            <p>My tutor's name: Ms. Nguyen Thuy Linh </p>
-            <h2>Members Contributions</h2>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section>
+            <h2>Group Information</h2>
+            <ul>
+                <li><strong>Group Name:</strong> Group 02</li>
+                <li><strong>Class Time and Day:</strong> Friday, 2:00 PM – 5:00 PM</li>
+                <li><strong>Tutor:</strong> Ms. Nguyen Thuy Linh</li>
+                <li>
+                    <strong>Members:</strong>
+                    <ul>
+                        <li>Vu Hai Anh</li>
+                        <li>Vo Quynh Thu</li>
+                        <li>Le Thi Thuy Diep</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Members’ Contributions</h2>
             <dl>
                 <dt>Vu Hai Anh</dt>
-                <dd>In charge of Jobs Description page and CSS</dd>
+                <dd>Responsible for Job Descriptions page and main CSS layout.</dd>
+
                 <dt>Vo Quynh Thu</dt>
-                <dd>In charge of Home page and About page</dd>
+                <dd>Responsible for Home page and About page content & design.</dd>
+
                 <dt>Le Thi Thuy Diep</dt>
-                <dd>In charge of Apply page</dd>
+                <dd>Responsible for Apply page and form validation.</dd>
             </dl>
-            <img src="anh ba nguoi.jpg" alt="Group photo">
+        </section>
+
+        <section>
+            <h2>Group Photo</h2>
+            <figure>
+                <img src="images/team_photo.png" alt="Group 02 team photo" width="350" />
+                <figcaption>Our Group 02 - COS10026 Web Technology Project Team</figcaption>
+            </figure>
+            <p>
+                We are Group 02 from the Friday 2–5 PM class. Our team worked collaboratively
+                on this SmartTech Solutions project to design and build a professional static website using HTML and
+                CSS.
+            </p>
+        </section>
+
+        <section>
+            <h2>Members’ Interests</h2>
             <table>
-                <tr>
-                    <th>People</th>
-                    <th>Interests</th>
-                </tr>
-                <tr>
-                    <td>Vu Hai Anh</td>
-                    <td>Astronomy, History, Literary Novel, Travelling, Architecture, Cats</td>
-                </tr>
-                
-                <tr>
-                    <td>Vo Quynh Thu</td>
-                    <td>music, reading stories, fashion, travelling and cooking</td>
-                </tr>
-
-                <tr>
-                    <td>Le Thi Thuy Diep</td>
-                    <td>reading, music</td>
-                </tr>
-                
+                <caption>Group Members’ Interests and Hobbies</caption>
+                <thead>
+                    <tr>
+                        <th>Member</th>
+                        <th>Interests</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vu Hai Anh</td>
+                        <td>Astronomy, History, Literature, Travelling, Architecture, Cats</td>
+                    </tr>
+                    <tr>
+                        <td>Vo Quynh Thu</td>
+                        <td>Music, Reading, Fashion, Travelling, Cooking</td>
+                    </tr>
+                    <tr>
+                        <td>Le Thi Thuy Diep</td>
+                        <td>Reading, Music</td>
+                    </tr>
+                </tbody>
             </table>
-            <img src="gau.png" alt="bear">
-            <p>Vu Hai Anh</p>
-            <ul>
-                <li>A really happy, socializing person</li>
-                <li>Team leader</li>
-                
-            </ul>
+        </section>
 
-            <img src="rua.png" alt="turtle">
-            <p>Vo Quynh Thu</p>
-            <ul>
-                <li>An introverted and confident person</li>
-                <li>Team member</li>
-            </ul>
+        <section>
+            <h2>Our Personalities</h2>
 
-            <img src="tho.png" alt="bunny">
-            <p>Le Thi Thuy Diep</p>
-            <ul>
-                <li>A caring person who helps Thu and Hai Anh a lot</li>
-                <li>Team memmber</li>
-            </ul>
-            
-        </article>
-    </body>
+            <article>
+                <figure>
+                    <img src="images/gau.png" alt="Bear icon representing Hai Anh" width="120" />
+                    <figcaption>Vu Hai Anh</figcaption>
+                </figure>
+                <ul>
+                    <li>A cheerful and sociable person</li>
+                    <li>Team Leader</li>
+                </ul>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="images/rua.png" alt="Turtle icon representing Quynh Thu" width="120" />
+                    <figcaption>Vo Quynh Thu</figcaption>
+                </figure>
+                <ul>
+                    <li>An introverted but confident person</li>
+                    <li>Team Member</li>
+                </ul>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="images/tho.png" alt="Bunny icon representing Diep" width="120" />
+                    <figcaption>Le Thi Thuy Diep</figcaption>
+                </figure>
+                <ul>
+                    <li>A caring person who supports team members</li>
+                    <li>Team Member</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>© 2025 | <a href="apply.html">SmartTech Solutions</a> </p>
+    </footer>
+</body>
+
 </html>
+
+<!-- End of about.html -->
